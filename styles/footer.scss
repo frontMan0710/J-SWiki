@@ -1,0 +1,57 @@
+@media screen and (min-width: 1024px) {
+  footer {
+    background-color: var(--lightblack-color);
+    max-height: 391px;
+    height: 20.36vw;
+    padding: 1.92vw 0 1.92vw 0;
+    .footerContent {
+      display: flex;
+      justify-content: space-between;
+      .footerColumn {
+        &:first-of-type {
+          max-width: 375px;
+          width: 19.53vw;
+        }
+        &:nth-of-type(2) {
+          max-width: 550px;
+          width: 28.64vw;
+        }
+        &:last-of-type {
+          max-width: 170px;
+          width: 8.85vw;
+        }
+        .footerList, .footerTitle {
+          color: var(--white-color);
+          font-family: "Roboto Mono", monospace;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          font-weight: 400;
+          font-size: 1.04vw;
+          .footerListItem {
+            a {
+              font-family: "Roboto Mono", monospace;
+              color: var(--white-color);
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            &::after {
+              content: ",";
+            }
+            &:last-of-type {
+              &::after {
+                content: "";
+              }
+            }
+          }
+          .messageAboutGPT::after {
+            content: "\0a(!Не все ответы чатбота корректны, и выходная \0a информация сверяется с другими источниками!)";
+            white-space: pre;
+          }
+        }
+      }
+    }
+  }
+}
