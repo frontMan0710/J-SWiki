@@ -15,4 +15,25 @@ $(function () {
         $("h3, p, span, li, a").css({"font-size":"1.04vw"})
         $(".second, .third").css({"padding-bottom":"4.11vw"})
     }
+
+    $("#getSecond").click(function () {
+        $("body,html").animate({scrollTop: $("#ourBlog").offset().top}, 400)
+    })
+
+    var colors = ["#5699F2", "#F345B7"]
+    $(".footerListItem a").each(function () {
+        $(this).mouseenter(function () {
+            var getRandomArrIndex = Math.floor(Math.random() * colors.length)
+            $(this).css("color", colors[getRandomArrIndex])
+        })
+        $(this).mouseleave(function () {
+            $(this).css("color", "var(--white-)")
+        })
+    })
+    $("a.card").mouseenter(function () {
+        $(this).css({"animation":"hoverUp 0.2s ease", "animation-fill-mode":"forwards"})
+    })
+    $("a.card").mouseleave(function () {
+        $(this).css({"animation":"hoverDown 0.2s ease", "animation-fill-mode":"forwards"})
+    })
 })

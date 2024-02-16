@@ -15,6 +15,7 @@ h1, h2, span, a, .tech_fontFlex {
     --lightblack-color: rgba(26, 26, 26, 1);
     --lightblack-color-op: rgba(26, 26, 26, 0.2);
     --scss-theme-color: rgba(255, 76, 193, 0.9);
+    --scss-darker-color: rgba(204, 104, 154, 1);
     --jq-theme-color: rgba(86, 153, 242, 0.9);
     --white-color: rgba(255, 255, 255, 1)
 }
@@ -28,7 +29,24 @@ main {
 section {
     width: 100%;
 }
-a:hover {
+
+@keyframes hoverUp {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(2deg) scale(1.025);
+    }
+}
+@keyframes hoverDown {
+    from {
+        transform: rotate(2deg) scale(1.025)
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+#getSecond:hover {
     transform: scale(1.03);
 }
 @media screen and (min-width: 1024px) {
