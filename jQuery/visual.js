@@ -36,4 +36,7 @@ $(function () {
     $("a.card").mouseleave(function () {
         $(this).css({"animation":"hoverDown 0.2s ease", "animation-fill-mode":"forwards"})
     })
+    $(".lazyLoad").Lazy({
+        effect: "fadeIn"
+    })
 })

@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="@frontMan">
     <title>J - S Wiki</title>
     <link rel="icon" type="image/x-icon" href="./images/flet.ico">
+    <meta name="description" content="We can to offer you look at our documentation about jQuery lib and SCSS preprocessor in blog view">
+    <meta name="keywords" content="jQuery, SCSS, frontMan, coderMan">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Do you studying web?">
+    <meta property="og:description" content="We tell you more about everything what you interested">
+    <meta property="og:url" content="http://localhost:63342/MyWiki/index.html?_ijt=ka7c1jnmtelnn2ncpp5rf5fa33">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQycEtrtDF4WSKxhKNBJ5WSfam3ynaoJyEgLA&usqp=CAU">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="320">
     <link rel="stylesheet" href="./styles/stylelink.css">
 </head>
 <body>
@@ -47,8 +57,8 @@
                 <h2>Наши Блоги</h2>
             </div>
             <div class="blogCards">
-                <a href="" class="card"></a>
-                <a href="" class="card"></a>
+                <a href="" class="card lazyLoad"></a>
+                <a href="" class="card lazyLoad"></a>
             </div>
         </div>
     </section>
@@ -59,7 +69,7 @@
             </div>
             <div class="secondAboutJQ">
                 <div class="langLogo">
-                    <img src="./images/jquery.png">
+                    <img data-src="./images/minificated/jquery_min.png" class="lazyLoad">
                 </div>
                 <div class="JQTextBlockWrapper">
                     <div class="textBlock">
@@ -94,7 +104,7 @@
                     </div>
                 </div>
                 <div class="langLogo">
-                    <img src="./images/scss.png">
+                    <img data-src="./images/minificated/scss_min.png" class="lazyLoad">
                 </div>
             </div>
         </div>
@@ -141,7 +151,8 @@
         </div>
     </div>
 </footer>
-<script src="./libs/jquery/jquery-3.7.1.min.js"></script>
-<script src="./jQuery/visual.js"></script>
+<script defer src="./libs/jquery/jquery-3.7.1.min.js"></script>
+<script defer src="./libs/jqueryLazyLoading/jquery.lazy.min.js"></script>
+<script defer src="./jQuery/visual.js"></script>
 </body>
 </html>
