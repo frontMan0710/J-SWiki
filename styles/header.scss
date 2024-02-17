@@ -1,4 +1,4 @@
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   header {
     background-color: transparent;
     backdrop-filter: blur(5px);
@@ -14,7 +14,27 @@
     #logo, .logo {
       max-width: 200px;
       max-height: 75px;
-      height: 3.9vw;
+      height: 100%;
+    }
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px){
+  header {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--lightblack-color-op);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9;
+    max-width: 100vw;
+    width: 100vw;
+    max-height: 90px;
+    #logo, .logo {
+      max-width: 200px;
+      max-height: 75px;
+      height: 100%;
     }
   }
 }

@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-/*-Reset-Construction-*/
 * { margin: 0; padding: 0; border: 0; box-sizing: border-box;}
-body { width: 100%; height: 100%;}
-header, nav, aside, footer { display: block;}
-main, section {overflow: hidden;}
+body { width: 100%; height: 100%; transition: background-color 0.3s ease;}
+header, footer { display: block;}
+main, section, header, footer {overflow: hidden;}
 button, input, a { cursor: pointer;}
 ul li { list-style: none;}
 h1, h2, span, a, .tech_fontFlex {
     font-family: "Roboto Flex", sans-serif;
 }
-/*-Variables-*/
 :root {
     --lightblack-color: rgba(26, 26, 26, 1);
     --lightblack-color-op: rgba(26, 26, 26, 0.2);
     --scss-theme-color: rgba(255, 76, 193, 0.9);
     --scss-darker-color: rgba(204, 104, 154, 1);
     --jq-theme-color: rgba(86, 153, 242, 0.9);
+    --jq-darker-color: rgba(79, 143, 232, 1);
     --white-color: rgba(255, 255, 255, 1)
 }
-/*-Media-Queries-*/
 main {
+    background-color: var(--white-color);
     flex: 1 1;
     max-width: 100vw;
     width: 100%;
@@ -46,26 +45,49 @@ section {
         transform: rotate(0deg) scale(1);
     }
 }
+.contentBorder {
+    height: 100%;
+    margin: 0 auto;
+}
 #getSecond:hover {
     transform: scale(1.03);
+}
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sectionTitle h2 {
+    font-weight: 800;
+}
+.textBlock::-webkit-scrollbar {
+    width: 8px;
+}
+.textBlock:first-of-type::-webkit-scrollbar-thumb {
+    background-color: var(--lightblack-color-op);
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-left: 1px solid var(--lightblack-color-op);
+}
+body.jq-scrollbar {
+    background-color: var(--jq-theme-color);
+}
+body.scss-scrollbar {
+    background-color: var(--scss-theme-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--lightblack-color-op);
 }
 @media screen and (min-width: 1024px) {
     .contentBorder {
         max-width: 1280px;
         width: 66.66vw;
-        height: 100%;
-        margin: 0 auto;
-    }
-    .sectionTitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-height: 144px;
-        height: 7.5vw;
-    }
-    .sectionTitle h2 {
-        font-weight: 800;
     }
     .textBlock {
         background-color: var(--white-color);
@@ -77,5 +99,58 @@ section {
         width: 28.8vw;
         max-height: 360px;
         height: 18.75vw;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .contentBorder {
+        max-width: 920px;
+        width: 90vw;
+    }
+    .textBlock {
+        background-color: var(--white-color);
+        color: var(--lightblack-color);
+        font-family: "Roboto Mono", monospace;
+        text-align: left;
+        border-radius: 2px;
+        max-width: 553px;
+        width: 54.05vw;
+        max-height: 360px;
+        height: 35.19vw;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .contentBorder {
+        max-width: 707px;
+        width: 92vw;
+    }
+    .textBlock {
+        background-color: var(--white-color);
+        color: var(--lightblack-color);
+        font-family: "Roboto Mono", monospace;
+        overflow: scroll;
+        text-align: left;
+        border-radius: 2px;
+        max-width: 353px;
+        width: 46.02vw;
+        max-height: 230px;
+        height: 29.98vw;
+    }
+}
+@media screen and (max-width: 424px) and (min-width: 320px) {
+    .contentBorder {
+        max-width: 390px;
+        width: 92vw;
+    }
+    .textBlock {
+        background-color: var(--white-color);
+        color: var(--lightblack-color);
+        font-family: "Roboto Mono", monospace;
+        overflow: scroll;
+        text-align: left;
+        border-radius: 2px;
+        max-width: 390px;
+        width: 92vw;
+        max-height: 260px;
+        height: 61.32vw;
     }
 }
