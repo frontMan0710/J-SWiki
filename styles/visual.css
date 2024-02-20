@@ -9,6 +9,14 @@ ul li { list-style: none;}
 h1, h2, span, a, .tech_fontFlex {
     font-family: "Roboto Flex", sans-serif;
 }
+.tech_fontMono {
+    font-family: "Roboto Mono", monospace;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 :root {
     --lightblack-color: rgba(26, 26, 26, 1);
     --lightblack-color-op: rgba(26, 26, 26, 0.2);
@@ -60,6 +68,9 @@ section {
 }
 .sectionTitle h2 {
     font-weight: 800;
+}
+.textBlock {
+    overflow: scroll;
 }
 .textBlock::-webkit-scrollbar {
     width: 8px;
@@ -145,7 +156,6 @@ body::-webkit-scrollbar-thumb {
         background-color: var(--white-color);
         color: var(--lightblack-color);
         font-family: "Roboto Mono", monospace;
-        overflow: scroll;
         text-align: left;
         border-radius: 2px;
         max-width: 390px;
