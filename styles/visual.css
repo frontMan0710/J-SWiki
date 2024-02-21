@@ -6,7 +6,7 @@ header, footer { display: block;}
 main, section, header, footer {overflow: hidden;}
 button, input, a { cursor: pointer; outline: none;}
 ul li { list-style: none;}
-h1, h2, span, input, a, button .tech_fontFlex {
+h1, h2, span, input, a, button, .tech_fontFlex {
     font-family: "Roboto Flex", sans-serif;
 }
 .tech_fontMono {
